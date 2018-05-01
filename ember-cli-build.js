@@ -7,7 +7,7 @@ module.exports = function(defaults) {
 
     'esw-cache-fallback': {
       patterns: [
-        '/api/v1/(.+)' // Update this string in future to cache your API URLs - Nikhil Patil
+        '/' // Update this string in future to cache your API URLs - Nikhil Patil
       ],
       version: '1.0'
     },

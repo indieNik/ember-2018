@@ -6,13 +6,13 @@ module.exports = function(/* environment, appConfig */) {
   // supported properties
 
   return {
-    name: "TEST",
-    short_name: "test",
+    name: "indieNik",
+    short_name: "indieNik",
     description: "Testing Ember App",
     start_url: "/",
     display: "standalone",
-    background_color: "rgb(130, 250, 180, 0.100)",
-    theme_color: "rgb(10, 100, 100)",
+    background_color: "#0a6464",
+    theme_color: "#0ea9a9",
     icons: [
       {
         src: "images/logo.png",
