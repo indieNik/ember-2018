@@ -15,7 +15,7 @@ module.exports = function(/* environment, appConfig */) {
     theme_color: "rgb(10, 100, 100)",
     icons: [
       {
-        src: "/ember-welcome-page/images/construction.png",
+        src: "images/logo.png",
         sizes: "540x540",
         type: "image/png"
       }
