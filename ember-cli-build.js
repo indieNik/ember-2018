@@ -4,6 +4,17 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+
+    'esw-cache-fallback': {
+      patterns: [
+        '/api/v1/(.+)' // Update this string in future to cache your API URLs - Nikhil Patil
+      ],
+      version: '1.0'
+    },
+    'ember-service-worker': {
+      versionStrategy: 'every-build',
+      registrationStrategy: 'async'
+    }
     // Add options here
   });
 
