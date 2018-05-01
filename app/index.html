@@ -15,11 +15,23 @@
     {{content-for "head-footer"}}
   </head>
   <body role="main">
-    {{content-for "body"}}
-
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/ember-quickstart.js"></script>
-
-    {{content-for "body-footer"}}
+      <nav>
+          <ul class="navigation">
+              <li><a href="index">indie<span style="color:rgb(130, 250, 180)">NIK</span></a></li>
+              <li><a href="contact">Contact Us</a></li>
+              <li><a href="about">About Us</a></li>
+          </ul>
+      </nav>
+      <footer>
+          <div class="footer">
+              &copy; 2018 Nikhil Patil - All Rights Reserved!
+          </div>
+      </footer>
+      {{content-for "body"}}
+      
+      <script src="{{rootURL}}assets/vendor.js"></script>
+      <script src="{{rootURL}}assets/ember-quickstart.js"></script>
+      
+      {{content-for "body-footer"}}
   </body>
 </html>
