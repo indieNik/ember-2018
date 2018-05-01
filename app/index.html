@@ -87,7 +87,9 @@
     </footer>
     
     {{content-for "body"}}
-
+    
+    <script src="{{rootURL}}assets/vendor.js" ></script>
+    <script src="{{rootURL}}assets/ember-quickstart.js"></script>
     <noscript id="deferred-styles">
       <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
       <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-quickstart.css">
@@ -106,8 +108,6 @@
       else window.addEventListener('load', loadDeferredStyles);
     </script>
       
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/ember-quickstart.js"></script>
       
     {{content-for "body-footer"}}
   </body>
