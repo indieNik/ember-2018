@@ -8,13 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
-
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-quickstart.css">
-
-    {{content-for "head-footer"}}
-  </head>
-  <body role="main">
     <style>
       * {
             margin: 0%;
@@ -75,23 +68,46 @@
             color: white;
         }
     </style>
-      <nav>
-          <ul class="navigation">
-              <li><a href="index">indie<span style="color:rgb(130, 250, 180)">NIK</span></a></li>
-              <li><a href="contact">Contact Us</a></li>
-              <li><a href="about">About Us</a></li>
-          </ul>
-      </nav>
-      <footer>
-          <div class="footer">
-              &copy; 2018 Nikhil Patil - All Rights Reserved!
-          </div>
-      </footer>
-      {{content-for "body"}}
+
+    {{content-for "head-footer"}}
+  </head>
+  <body role="main">
+    <nav>
+        <ul class="navigation">
+            <li><a href="index">indie<span style="color:rgb(130, 250, 180)">NIK</span></a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="about">About Us</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="footer">
+            &copy; 2018 Nikhil Patil - All Rights Reserved!
+        </div>
+    </footer>
+    
+    {{content-for "body"}}
+
+    <noscript id="deferred-styles">
+      <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+      <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-quickstart.css">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
       
-      <script src="{{rootURL}}assets/vendor.js"></script>
-      <script src="{{rootURL}}assets/ember-quickstart.js"></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/ember-quickstart.js"></script>
       
-      {{content-for "body-footer"}}
+    {{content-for "body-footer"}}
   </body>
 </html>
